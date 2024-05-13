@@ -1,0 +1,7 @@
+spring:
+  jpa:
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://localhost:5000/db-lock
+    username: postgres
+    password: pass
