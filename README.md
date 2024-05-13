@@ -1,8 +1,8 @@
 | Strategy                | Works? | Time, ms |
 |-------------------------|--------|----------|
-| ReadUncommitedIsolation | -      | 1200     |
-| ReadCommitedIsolation   | -      | 1200     |
-| RepeatableReadIsolation | +      | 1600     |
-| SerializableIsolation   | +      | 1500     |
-| PessimisticLock         | +      | 1500     |
+| ReadUncommitedIsolation | -      | 200      |
+| ReadCommitedIsolation   | -      | 200      |
+| RepeatableReadIsolation | +      | 700      |
+| SerializableIsolation   | +      | 700      |
+| PessimisticLock         | +      | 500      |
 | OptimisticLock          |        |          |
