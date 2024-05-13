@@ -4,5 +4,5 @@
 | ReadCommitedIsolation   | -      | 200      |
 | RepeatableReadIsolation | +      | 700      |
 | SerializableIsolation   | +      | 700      |
-| PessimisticLock         | +      | 500      |
-| OptimisticLock          |        |          |
+| PessimisticLock         | +      | 600      |
+| OptimisticLock          | +      | 600      |
