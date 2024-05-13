@@ -10,6 +10,7 @@ import java.util.UUID.randomUUID
 import java.util.concurrent.Executors
 import java.util.concurrent.Future
 import java.util.stream.IntStream
+import kotlin.time.measureTime
 
 @Component
 class Runner(
@@ -27,8 +28,10 @@ class Runner(
 
     private fun tryStrategy(taskDispatcher: TaskDispatcher) {
         createPendingTasks()
-        val dispatchedTasks = dispatchTasksWithManyDispatchers(taskDispatcher)
-        check(taskDispatcher, dispatchedTasks)
+        measureTime {
+            val dispatchedTasks = dispatchTasksWithManyDispatchers(taskDispatcher)
+            check(taskDispatcher, dispatchedTasks)
+        }.also { log.info("Took $it") }
     }
 
     private fun createPendingTasks() {
